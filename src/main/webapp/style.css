@@ -1,0 +1,191 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    width: 100%;
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.container {
+    height: 100%;
+    background-image: linear-gradient(to top, #b224ef 0%, #7579ff 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+.box {
+    display: grid;
+    grid-template-columns: repeat(2, 250px);
+    height: 250px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px gray, -5px -5px 10px lightgray;
+    overflow: hidden;
+}
+
+.leftcontainer {
+    background-image: linear-gradient(to top, #cc208e 0%, #6713d2 100%);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+#log-img {
+    width: 90px;
+}
+
+#log-title {
+    color: white;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.desc {
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    margin-top: 10px;
+}
+
+.rightcontainer {
+    background-color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    justify-content: center;
+}
+.formpage {
+    padding: 10px;
+}
+
+#form-label {
+    font-weight: 700;
+}
+
+.submit {
+    display: flex;
+    justify-content: center;
+}
+
+#submit-button {
+    padding: 6px 10px;
+    font-size: 1rem;
+    color: white;
+    background-color: rgba(18, 18, 201, 0.959);
+    border-radius: 5px;
+    transition: all 0.2s ease;
+    border: none;
+    cursor: pointer;
+}
+
+#submit-button:hover {
+    transform: scale(1.1);
+}
+
+/* 📜 Footer */
+.footer {
+    margin-top: 10px;
+    text-align: center;
+    color: white;
+    font-size: 1rem;
+}
+
+/* 📱📲 RESPONSIVE MEDIA QUERIES */
+
+/* For large tablets and small laptops (≤1024px) */
+@media (max-width: 1024px) {
+    .box {
+        grid-template-columns: repeat(2, 200px);
+        height: auto;
+    }
+
+    #log-img {
+        width: 80px;
+    }
+
+    .desc {
+        font-size: 1.1rem;
+    }
+}
+
+/* For tablets (≤768px) */
+@media (max-width: 768px) {
+    .box {
+        grid-template-columns: 1fr;
+        width: 80%;
+        height: auto;
+    }
+
+    .leftcontainer {
+        border-radius: 10px 10px 0 0;
+    }
+
+    .rightcontainer {
+        border-radius: 0 0 10px 10px;
+    }
+
+    .logo {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    #log-img {
+        width: 80px;
+    }
+
+    #log-title {
+        font-size: 1rem;
+    }
+
+    .desc {
+        font-size: 1.1rem;
+        padding: 0.5rem;
+    }
+}
+
+/* For mobile phon {
+        width: 100%;
+        grid-template-columns: 1fr;
+        box-shadow: none;
+        height: auto;
+    }
+
+    #log-img {
+        width: 70px;
+    }
+
+    #log-title {
+        font-size: 1rem;
+        margin-top: 5px;
+    }
+
+    .desc {
+        font-size: 1rem;
+    }
+
+    .rightcontainer {
+        padding: 10px;
+    }
+
+    #submit-button {
+        font-size: 0.9rem;
+        padding: 5px 8px;
+    }
+
+    .footer {
+        font-size: 0.8rem;
+    }
+}
